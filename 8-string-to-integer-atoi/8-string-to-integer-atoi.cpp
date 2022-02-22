@@ -14,7 +14,7 @@ public:
         }
         // Check sign
         if (s[i] == '-' || s[i] == '+') {
-            sign = s[i++] == '-' ? -1 : 1;
+            sign = (s[i++] == '-' ? -1 : 1);
         }
         // Convert to integer and avoid overflow, avoid invalid input
         while (i < s.length() && s[i] >= '0' && s[i] <= '9') {
@@ -28,3 +28,4 @@ public:
         return base * sign;
     }
 };
+
