@@ -14,7 +14,6 @@ public:
     }
     //[start, end]
     bool isPalindrome(string& s, int start, int end) {
-        const int N = s.size();
         int l = start, r = end;
         while (l <= r) {
             if (s[l++] != s[r--]) {
