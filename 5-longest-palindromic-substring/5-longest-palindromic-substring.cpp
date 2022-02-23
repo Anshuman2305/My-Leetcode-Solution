@@ -1,7 +1,7 @@
 class Solution {
 public:
     string longestPalindrome(string s) {
-        const int N = s.size();
+        int N = s.size();
         string res;
         for (int i = 0; i < N; i++) {
             for (int j = i; j < N; j++) {
