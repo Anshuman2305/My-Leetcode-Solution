@@ -6,7 +6,7 @@ public:
             //i: index of char
             for(int j = 1; j < strs.size(); j++){
                 //j: index of str
-                if(i >= strs[j].size() || strs[0][i] != strs[j][i]){
+                if(strs[0][i] != strs[j][i]){
                     return strs[0].substr(0, i);
                 }
             }
@@ -15,3 +15,4 @@ public:
         
     }
 };
+
