@@ -30,7 +30,7 @@ public:
             l2 = l2->next;
         }
 
-        while(l1 && l2){
+        while(l1 !=NULL && l2!=NULL){
            if(l1->val > l2->val){
                p->next = l2;
                p = l2;
