@@ -14,10 +14,10 @@ public:
         ListNode* head = NULL;
         ListNode* p= NULL;
 
-        if(!l1){
+        if(l1==NULL){
             return l2;
         }
-        if(!l2){
+        if(l2==NULL){
             return l1;
         }
 
