@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode* head = NULL;
+        ListNode* head = NULL; //Head of the result list
         ListNode* p= NULL;
 
         if(l1==NULL){
@@ -21,7 +21,7 @@ public:
             return l1;
         }
 
-        if(l2->val > l1->val){
+        if(l2->val > l1->val){ //Choose head which is smaller of the two lists
             head = p = l1;
             l1 = l1->next;
         }
@@ -30,7 +30,7 @@ public:
             l2 = l2->next;
         }
 
-        while(l1 !=NULL && l2!=NULL){
+        while(l1 != NULL && l2 != NULL){
            if(l1->val > l2->val){
                p->next = l2;
                p = l2;
