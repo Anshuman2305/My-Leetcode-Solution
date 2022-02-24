@@ -43,11 +43,11 @@ public:
            }
         }
 
-        if(l1){
+        if(l1 != NULL){
             p->next = l1;
         }
 
-        if(l2){
+        if(l2 != NULL){
             p->next = l2;
         }
 
