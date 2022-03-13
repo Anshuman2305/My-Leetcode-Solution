@@ -12,27 +12,25 @@
 class Solution {
 public:
     int minDepth(TreeNode* root) {
-         // Corner case. Should never be hit unless the code is
-    // called on root = NULL
-    if (root == NULL)
+    if(root == NULL)
         return 0;
- 
-    // Base case : Leaf Node. This accounts for height = 1.
-    if (root->left == NULL && root->right == NULL)
-    return 1;
-   
-    int l = INT_MAX, r = INT_MAX;
-    // If left subtree is not NULL, recur for left subtree
-   
-    if (root->left)
-    l = minDepth(root->left);
- 
-    // If right subtree is not NULL, recur for right subtree
-    if (root->right)
-    r =  minDepth(root->right);
- 
-  //height will be minimum of left and right height +1
-    return min(l , r) + 1;
+    queue < pair <TreeNode* , int> > q;
+    q.push({root , 1});
+    TreeNode* frontNode;
+    int depth;
+    while(!q.empty())
+    {
+        frontNode = q.front().first;
+        depth = q.front().second;
+        q.pop();
+        if(frontNode->left == NULL && frontNode->right == NULL)
+            return depth;
+        if(frontNode->left != NULL)
+            q.push({frontNode->left , depth + 1});
+        if(frontNode->right != NULL)
+            q.push({frontNode->right , depth + 1});
+    }
+    return -1;
 
     }
 };
