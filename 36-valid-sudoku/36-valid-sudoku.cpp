@@ -8,9 +8,9 @@ public:
 				if (board[i][j] != '.') {
 					int num = board[i][j] - '1';  //for num value 0 to 8 we are doing -'1' //we are converting char to int
 					int k = i / 3 * 3 + j / 3;
-					if (used1[i][num] || used2[j][num] || used3[k][num])
+					if (used1[i][num] || used2[j][num] || used3[k][num]) //if(0) is false and if(any other no. than 0) is true
 						return false;
-					used1[i][num] = used2[j][num] = used3[k][num] = 1;
+					used1[i][num] = used2[j][num] = used3[k][num] = 1; //we can assign any no. other than 0
 				}
 			}
 		}
