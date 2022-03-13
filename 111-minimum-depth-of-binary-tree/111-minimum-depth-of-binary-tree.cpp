@@ -12,11 +12,27 @@
 class Solution {
 public:
     int minDepth(TreeNode* root) {
-        if(root == NULL) return 0;
-        if(root->left != NULL && root->right != NULL) //when both the side of the root exist
-        
-             return 1 + min(minDepth(root->left), minDepth(root->right));  //adding +1 on each recursive calling
-        
-        return 1 + max(minDepth(root->left), minDepth(root->right)); //when only one side of the root exist
+         // Corner case. Should never be hit unless the code is
+    // called on root = NULL
+    if (root == NULL)
+        return 0;
+ 
+    // Base case : Leaf Node. This accounts for height = 1.
+    if (root->left == NULL && root->right == NULL)
+    return 1;
+   
+    int l = INT_MAX, r = INT_MAX;
+    // If left subtree is not NULL, recur for left subtree
+   
+    if (root->left)
+    l = minDepth(root->left);
+ 
+    // If right subtree is not NULL, recur for right subtree
+    if (root->right)
+    r =  minDepth(root->right);
+ 
+  //height will be minimum of left and right height +1
+    return min(l , r) + 1;
+
     }
 };
