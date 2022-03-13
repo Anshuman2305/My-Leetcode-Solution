@@ -18,7 +18,7 @@ public:
         {
             return root->val == targetSum;
         }
-        sum+=root->val;
-        return hasPathSum(root->left,targetSum-sum) || hasPathSum(root->right, targetSum-sum);
+        sum+=root->val; //we are adding the root node value to sum
+        return hasPathSum(root->left,targetSum-sum) || hasPathSum(root->right, targetSum-sum); //now we have to find for the remaining sum value that is required to get the targetsum
     }
 };
