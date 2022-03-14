@@ -12,7 +12,7 @@ public:
         vector<int> dp(sum + 1, 0);
         dp[0] = 1;
         for (auto num : nums) {
-            for (int i = sum; i >= 0; --i)
+            for (int i = sum; i >=0; --i)
                 if (dp[i]) dp[i + num] = 1;
             if (dp[sum / 2]) return true;
         }
