@@ -27,6 +27,6 @@ public:
             rightdepth = maxDepth(root->right);
             
         }
-        return leftdepth > rightdepth ? leftdepth + 1 : rightdepth + 1;
+        return max(leftdepth + 1, rightdepth + 1);
     }
 };
