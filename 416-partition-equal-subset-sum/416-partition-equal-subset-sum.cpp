@@ -7,7 +7,7 @@ public:
             sum+=nums[i]; 
         }
         
-           if(sum%2 != 0) return false;
+        if(sum%2 != 0) return false;
         sum/=2;
 
         
