@@ -1,7 +1,7 @@
 class MyHashMap {
     
 public:
-    int data[1000001];
+    int data[1000001]; //0 to 1000000
     
     MyHashMap(){ 
         fill(data, data + 1000000, -1);
