@@ -14,7 +14,7 @@ public:
         vector<bool> dp(sum+1, false); // sum+1 for 0 also
         dp[0] = true; 
         for (auto num : nums)
-            for (int i=sum; i>0; --i)           
+            for (int i=sum; i>0; --i)  
             if (num<=i) 
                     dp[i] = dp[i-num] || dp[i];
         return dp[sum];
