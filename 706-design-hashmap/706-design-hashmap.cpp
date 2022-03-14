@@ -1,23 +1,22 @@
 class MyHashMap {
     
-    map<int, int> data[100000];
-public:  
-    MyHashMap(){ //initializing vector. we are making 10^6+1 keys and storing -1 in each.
+public:
+    int data[1000001];
+    
+    MyHashMap(){ 
+        fill(data, data + 1000000, -1);
     }
     
     void put(int key, int value) {
-        data[key % 100000][key] = value;
+        data[key] = value;
     }
     
     int get(int key) {
-        map<int, int>::iterator iter = data[key % 100000].find(key);
-        if(iter == data[key % 100000].end())
-            return -1;
-        return data[key % 100000][key];
+        return data[key];
     }
     
     void remove(int key) {
-       data[key % 100000].erase(key);
+       data[key] = -1;
     }
 };
 
