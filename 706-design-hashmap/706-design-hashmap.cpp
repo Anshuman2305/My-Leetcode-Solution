@@ -4,7 +4,7 @@ public:
     int data[1000001];
     
     MyHashMap(){ 
-        fill(data, data + 1000001, -1);
+        fill(data, data + 1000000, -1);
     }
     
     void put(int key, int value) {
