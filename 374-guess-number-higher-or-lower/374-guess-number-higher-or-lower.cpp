@@ -22,6 +22,6 @@ public:
             else
                 high = mid-1;
         }
-        return high;
+        return high; //you can return low also because of only one element
     }
 };
