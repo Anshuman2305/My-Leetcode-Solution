@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        long int high = 100000;
+        long int high = INT_MAX;
         long int low = 1;
         long int mid;
         long int sq;
